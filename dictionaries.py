@@ -45,6 +45,9 @@ skills_dict = {
 	'pullover': 'Pullover',
 	'backflip': 'Back flip',
 	'triffus': 'Triffus',
+	'baranitostomach': 'Barani to stomach',
+	'rudiout': 'Rudi out',
+	'rudi': 'Rudi',
 }
 
 # abbreviation: list of prerequisite skills abbreviations
@@ -65,7 +68,7 @@ prerequisites_dict = {
 	'miller': ['fullcruiseroll', 'fullrudi'],
 	'fullcruiseroll': ['baranicruiseroll', 'fullfull'],
 	'baranicruiseroll': ['baranifull', '1n3rollout'],
-	'1n3rollout': ['1n3', '34frontrollout'],
+	'1n3rollout': ['halfouttostomach', '34frontrollout'],
 	'baranifull': ['baranicruiseduck', 'halfout'],
 	'baranicruiseduck': ['baranicruisetostomach'],
 	'baranicruisetostomach': ['baranitoback'],
@@ -81,6 +84,10 @@ prerequisites_dict = {
 	'arabian1n3rollout': ['1n3rollout', 'arabian1n3'],
 	'triffus': ['2n3', 'babytriff'],
 	'babytriff': ['halfout', 'doubleporpoise'],
+	'halfouttostomach': ['halfout', 'baranitostomach'],
+	'baranitostomach': ['barani'],
+	'rudiout': ['1n3rollout', 'rudi'],
+	'rudi': ['barani', '34frontrollout'],
 }
 
 def invert_skills_dict(d):
