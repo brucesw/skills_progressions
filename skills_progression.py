@@ -44,6 +44,3 @@ def print_prerequisites(skill):
 		print ''
 
 	print '===>{0}  ({1})'.format(skills_dict[skill], skill)
-
-
-print_prerequisites('halfout')

@@ -38,10 +38,21 @@ skills_dict = {
 	'porpoise': 'Porpoise',
 	'halfhalf': 'Half half',
 	'halfrudi': 'Half rudi',
+	'doubleback': 'Double back',
+	'backtoback': 'Back flip to back',
+	'cody': 'Cody',
+	'stomachtoback': 'Stomach drop to back drop',
+	'pullover': 'Pullover',
+	'backflip': 'Back flip',
+	'triffus': 'Triffus',
 }
 
 # abbreviation: list of prerequisite skills abbreviations
 prerequisites_dict = {
+	'cody': ['stomachtoback', 'pullover', 'backflip'],
+	'backflip': ['backdrop'],
+	'doubleback': ['cody', 'backtoback'],
+	'backtoback': ['backflip'],
 	'34front': ['stomachdrop'],
 	'frontflip': ['34front'],
 	'barani': ['frontflip'],
@@ -67,7 +78,9 @@ prerequisites_dict = {
 	'full': ['arabiancrashdive', 'barani'],
 	'halfhalf': ['halfout', 'arabian1n3'],
 	'halfrudi': ['rudiout', 'arabian1n3rollout'],
-	'arabian1n3rollout': ['1n3rollout', 'arabian1n3']
+	'arabian1n3rollout': ['1n3rollout', 'arabian1n3'],
+	'triffus': ['2n3', 'babytriff'],
+	'babytriff': ['halfout', 'doubleporpoise'],
 }
 
 def invert_skills_dict(d):
