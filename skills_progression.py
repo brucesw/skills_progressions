@@ -3,7 +3,7 @@ from helpers import *
 
 # this does main portion of the work
 # just a modified search algorithm
-def expand_prerequisites(skill, prereq_list, depth, ret):
+def expand_prerequisites(skill, prereq_list, depth, ret, abbreviations):
 	if skill not in prereq_list:
 		return
 	for s in prereq_list[skill]:
@@ -11,18 +11,21 @@ def expand_prerequisites(skill, prereq_list, depth, ret):
 		if depth not in ret:
 			ret[depth] = []
 		if s not in ret[depth]:
-			ret[depth].append(s)
-		expand_prerequisites(s, prereq_list, depth + 1, ret)
+			if abbreviations:
+				ret[depth].append(s)
+			else:
+				ret[depth].append(skills_dict[s])
+		expand_prerequisites(s, prereq_list, depth + 1, ret, abbreviations)
 
 # this is the main function call to get the prerequisites
 # for a skill.  argument must be an abbreviation
-def get_prereqs(skill):
+def get_prereqs(skill, abbreviations = False):
 	if skill not in prerequisites_dict:
 		return False, {}
 
 	d = {}
 
-	expand_prerequisites(skill, prerequisites_dict, 0, d)
+	expand_prerequisites(skill, prerequisites_dict, 0, d, abbreviations)
 
 	ret = remove_duplicates(d)
 
