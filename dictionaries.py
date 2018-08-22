@@ -48,6 +48,7 @@ skills_dict = {
 	'baranitostomach': 'Barani to stomach',
 	'rudiout': 'Rudi out',
 	'rudi': 'Rudi',
+	'halfhalftriff': 'Half half triff',
 }
 
 # abbreviation: list of prerequisite skills abbreviations
@@ -88,6 +89,9 @@ prerequisites_dict = {
 	'baranitostomach': ['barani'],
 	'rudiout': ['1n3rollout', 'rudi'],
 	'rudi': ['barani', '34frontrollout'],
+	'arabian2n3': ['2n3', 'arabian1n3'],
+	'2n3': ['1n3', 'doubleporpoise'],
+	'halfhalftriff': ['arabian2n3', 'triffus'],
 }
 
 def invert_skills_dict(d):
