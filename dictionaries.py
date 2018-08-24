@@ -49,12 +49,14 @@ skills_dict = {
 	'rudiout': 'Rudi out',
 	'rudi': 'Rudi',
 	'halfhalftriff': 'Half half triff',
+	'backdrop': 'Back drop',
 }
 
 # abbreviation: list of prerequisite skills abbreviations
 prerequisites_dict = {
 	'cody': ['stomachtoback', 'pullover', 'backflip'],
-	'backflip': ['backdrop'],
+	'backflip': ['pullover'],
+	'pullover': ['backdrop'],
 	'doubleback': ['cody', 'backtoback'],
 	'backtoback': ['backflip'],
 	'34front': ['stomachdrop'],
