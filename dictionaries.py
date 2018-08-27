@@ -6,7 +6,6 @@ skills_dict = {
 	'barani': 'Barani',
 	'frontflip': 'Front flip',
 	'full': 'Full',
-	'forwardroll': 'Forward roll',
 	'stomachdrop': 'Stomach drop',
 	'34front': 'Three quarter front',
 	'1n3': 'One and three quarters front',
@@ -50,6 +49,7 @@ skills_dict = {
 	'rudi': 'Rudi',
 	'halfhalftriff': 'Half half triff',
 	'backdrop': 'Back drop',
+	'stomachcruisetostomach': 'Stomach drop cruise to stomach',
 }
 
 # abbreviation: list of prerequisite skills abbreviations
@@ -74,7 +74,7 @@ prerequisites_dict = {
 	'1n3rollout': ['halfouttostomach', '34frontrollout'],
 	'baranifull': ['baranicruiseduck', 'halfout'],
 	'baranicruiseduck': ['baranicruisetostomach'],
-	'baranicruisetostomach': ['baranitoback'],
+	'baranicruisetostomach': ['baranitoback', 'stomachcruisetostomach'],
 	'baranitoback': ['barani'],
 	'fullfull': ['fullcruiseduck', 'baranifull'],
 	'fullcruiseduck': ['baranicruiseduck', 'fullcruisetostomach', 'arabian1n3'],
@@ -94,6 +94,16 @@ prerequisites_dict = {
 	'arabian2n3': ['2n3', 'arabian1n3'],
 	'2n3': ['1n3', 'doubleporpoise'],
 	'halfhalftriff': ['arabian2n3', 'triffus'],
+	'backdrop': [],
+	'stomachdrop': [],
+	'34frontrollout': ['baranitostomach'],
+	'backtostomach': ['backdrop', 'stomachdrop'],
+	'doubleporpoise': ['1n3', 'ballout'],
+	'fullcruisetostomach': ['full', 'baranicruisetostomach'],
+	'fulltoback': ['backtoback', 'full'],
+	'halfairplane': ['stomachdrop'],
+	'stomachtoback': ['stomachdrop', 'backdrop'],
+	'stomachcruisetostomach': ['stomachdrop'],
 }
 
 def invert_skills_dict(d):
